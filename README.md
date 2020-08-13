@@ -3,8 +3,8 @@
 ## Quick start
 For installing kubeless CLI using execute:
 ```bash
-$export OS=$(uname -s| tr '[:upper:]' '[:lower:]')
-$curl -OL https://github.com/kubeless/kubeless/releases/download/$RELEASE/kubeless_$OS-amd64.zip && \
+$ export OS=$(uname -s| tr '[:upper:]' '[:lower:]')
+$ curl -OL https://github.com/kubeless/kubeless/releases/download/$RELEASE/kubeless_$OS-amd64.zip && \
   unzip kubeless_$OS-amd64.zip && \
   sudo mv bundles/kubeless_$OS-amd64/kubeless /usr/local/bin/
 ```
@@ -31,10 +31,11 @@ httptriggers.kubeless.io      1h
 
 Create function:
 ```bash
-$kubeless function deploy sayhello --runtime go1.14 --from-file func.go --handler func.SayHello
+$ kubeless function deploy sayhello --runtime go1.14 --from-file func.go --handler func.SayHello
 ```
 
 Call the function
 ```bash
-kubeless function call sayhello --data 'Arber'
+$ kubeless function call sayhello --data 'Arber'
+Hello Arber
 ```
